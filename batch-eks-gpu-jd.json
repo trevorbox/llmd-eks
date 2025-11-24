@@ -1,0 +1,22 @@
+{
+    "jobDefinitionName": "MyGPUJobOnEks_Smi",
+    "type": "container",
+    "eksProperties": {
+        "podProperties": {
+            "hostNetwork": true,
+            "containers": [
+                {
+                    "image": "nvcr.io/nvidia/cuda:10.2-runtime-centos7",
+                    "command": ["nvidia-smi"],
+                    "resources": {
+                        "limits": {
+                            "cpu": "1",
+                            "memory": "1024Mi",
+                            "nvidia.com/gpu": "1"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

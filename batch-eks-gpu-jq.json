@@ -1,0 +1,10 @@
+ {
+    "jobQueueName": "My-Eks-GPU-JQ1",
+    "priority": 10,
+    "computeEnvironmentOrder": [
+      {
+        "order": 1,
+        "computeEnvironment": "My-Eks-GPU-CE1"
+      }
+    ]
+  }

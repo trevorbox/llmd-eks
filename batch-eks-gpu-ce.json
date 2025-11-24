@@ -1,0 +1,30 @@
+{
+  "computeEnvironmentName": "My-Eks-GPU-CE1",
+  "type": "MANAGED",
+  "state": "ENABLED",
+  "eksConfiguration": {
+    "eksClusterArn": "arn:aws:eks:us-east-2:<acct-id>:cluster/fabulous-badger-1764007365",
+    "kubernetesNamespace": "my-aws-batch-namespace"
+  },
+  "computeResources": {
+    "type": "EC2",
+    "allocationStrategy": "BEST_FIT_PROGRESSIVE",
+    "minvCpus": 0,
+    "maxvCpus": 128,
+    "instanceTypes": [
+      "p5.4xlarge"
+    ],
+    "subnets": [
+        "subnet-0e44daa6557af8f77",
+        "subnet-0e20989fa83302683",
+        "subnet-04ff2bd5c4be7423b",
+        "subnet-054cddb44728affd6",
+        "subnet-0d346a2542a65706f",
+        "subnet-01644c028380baccd"
+    ],
+    "securityGroupIds": [
+        "sg-0524f68e97eac4ace"
+    ],
+    "instanceRole": "eks-32cd5b89-690e-5165-e0ca-d13007bbf2dd"
+  }
+}
